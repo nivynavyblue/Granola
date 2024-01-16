@@ -8,6 +8,9 @@ const { Player } = require("discord-player");
 const fs = require("node:fs");
 const path = require("node:path");
 
+console.log('[ARON]: !COMMAND PSPSPSPS')
+console.log('[GRANOLA]: .........INICIALIZANDO.........')
+
 const client = new Client({
   intents: ["Guilds", "GuildMessages", "GuildVoiceStates"],
 });
@@ -36,6 +39,7 @@ const player = Player.singleton(client, {
   },
 });
 
+
 player.client.on("ready", () => {
   const guild_ids = client.guilds.cache.map((guild) => guild.id);
   const rest = new REST({ version: "9" }).setToken(process.env.TOKEN);
@@ -49,6 +53,8 @@ player.client.on("ready", () => {
       .then(() => console.log(`Adicionado comandos ao id ${guildId}`))
       .catch(console.error);
   }
+
+  console.log('[GRANOLA]: GRANOLA IS READY TO SERVE.')
 });
 
 //Command interaction handler
