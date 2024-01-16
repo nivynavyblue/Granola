@@ -45,7 +45,7 @@ module.exports = {
   execute: async ({ client, interaction }) => {
     if (!interaction.member.voice.channel)
       return interaction.reply(
-        "Você precisa estar em um canal de voz se não a granola não vai vir pra você (não adianta fazer pspspsps)."
+        "Você precisa estar em um canal de voz se não a granola não vai vir pra você, ela é timida. (não adianta fazer pspspsps)."
       );
 
     const player = useMasterPlayer();
@@ -70,7 +70,7 @@ module.exports = {
 
       embed
         .setDescription(
-          `**[${song.title}](${song.url})** foi adicionado a fila.`
+          `**[${song.title}](${song.url})** foi farejado adicionado a fila.`
         )
         .setThumbnail(song.thumbnail)
         .setFooter({ text: `Duração: ${song.duration}` });
@@ -91,7 +91,7 @@ module.exports = {
 
       embed
         .setDescription(
-          `**${result.tracks.length} músicas da playlist: [${playlist.title}](${playlist.url})** foram adicionadas a fila`
+          `**${result.tracks.length} músicas da playlist: [${playlist.title}](${playlist.url})** foram farejadas e adicionadas a fila`
         )
         .setThumbnail(playlist.thumbnail);
     } else if (interaction.options.getSubcommand() === "search") {

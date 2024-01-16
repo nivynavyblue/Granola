@@ -62,7 +62,7 @@ client.on("interactionCreate", async (interaction) => {
     await command.execute({ client, interaction });
   } catch (err) {
     console.log(err);
-    await interaction.reply("Ocorreu um erro ao executar o comando.");
+    await interaction.reply("A granola não soube o que fazer e foi embora em pânico, tente novamente mais tarde.");
   }
 });
 
